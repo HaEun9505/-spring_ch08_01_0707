@@ -26,7 +26,7 @@ public class MainClass {
 //		//gctx로 형 변환
 //		GenericXmlApplicationContext gctx = (GenericXmlApplicationContext)ctx;
 //		gctx.load("applicationCTX.xml");
-		//컨테이너 구동
+		//Container 파일 불러오기(컨테이너 구동)
 		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationCTX.xml");
 		
 		//컨테이너로부터 필요한 객체 요청
