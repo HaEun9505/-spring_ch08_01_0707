@@ -1,3 +1,4 @@
+
 package com.haeun.test;
 
 import java.io.IOException;
@@ -13,23 +14,23 @@ public class MainClass {
 
 	public static void main(String[] args) {
 //		ConfigurableApplicationContext ctx = new GenericXmlApplicationContext();
-//		ConfigurableEnvironment env = ctx.getEnvironment();	//È¯°æ º¯°æ
+//		ConfigurableEnvironment env = ctx.getEnvironment();	//í™˜ê²½ ë³€ê²½
 //		MutablePropertySources propertySources = env.getPropertySources();
 //		
-//		//¼ÂÆÃ
+//		//ì…‹íŒ…
 //		try {
 //			propertySources.addLast(new ResourcePropertySource("classpath:admin.properties"));
 //		} catch (IOException e) {
 //			e.printStackTrace();
 //		}
 //		
-//		//gctx·Î Çü º¯È¯
+//		//gctxë¡œ í˜• ë³€í™˜
 //		GenericXmlApplicationContext gctx = (GenericXmlApplicationContext)ctx;
 //		gctx.load("applicationCTX.xml");
-		//Container ÆÄÀÏ ºÒ·¯¿À±â(ÄÁÅ×ÀÌ³Ê ±¸µ¿)
+		//Container íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°(ì»¨í…Œì´ë„ˆ êµ¬ë™)
 		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationCTX.xml");
 		
-		//ÄÁÅ×ÀÌ³Ê·ÎºÎÅÍ ÇÊ¿äÇÑ °´Ã¼ ¿äÃ»
+		//ì»¨í…Œì´ë„ˆë¡œë¶€í„° í•„ìš”í•œ ê°ì²´ ìš”ì²­
 		AdminConnection adminConnection = ctx.getBean("adminconnection",AdminConnection.class);
 		String admin_id = adminConnection.getAdminId();
 		String admin_pw = adminConnection.getAdminPw();
@@ -40,5 +41,4 @@ public class MainClass {
 		
 		ctx.close();
 	}
-
 }

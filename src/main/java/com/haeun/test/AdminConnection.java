@@ -1,24 +1,24 @@
-package com.haeun.test;
 
+package com.haeun.test;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
 
 public class AdminConnection implements InitializingBean {
-	private String adminId;		// °ü¸®ÀÚ Id
-	private String adminPw;		// °ü¸®ÀÚ Pw
+	private String adminId;		// ê´€ë¦¬ì Id
+	private String adminPw;		// ê´€ë¦¬ì Pw
 	
-//	private Environment env;	//È¯°æ º¯¼ö Á¤ÀÇ(¼³Á¤)
+//	private Environment env;	//í™˜ê²½ ë³€ìˆ˜ ì •ì˜(ì„¤ì •)
 	
 //	@Override
-//	public void setEnvironment(Environment environment) {	// EnvironmentAware »ó¼Ó
+//	public void setEnvironment(Environment environment) {	// EnvironmentAware ìƒì†
 //		// TODO Auto-generated method stub
 //		setEnv(environment);
 //	}
 	
 	
 	@Override
-	//ÃÊ±âÈ­ µÈ ÈÄ¿¡ ¹Ù·Î (ÀÚµ¿)½ÇÇàµÇ´Â ¸Ş¼Òµå
+	//ì´ˆê¸°í™” ëœ í›„ì— ë°”ë¡œ (ìë™)ì‹¤í–‰ë˜ëŠ” ë©”ì†Œë“œ
 	public void afterPropertiesSet() throws Exception {
 //		setAdminId(env.getProperty("adminId"));
 //		setAdminPw(env.getProperty("adminPw"));
@@ -43,4 +43,3 @@ public class AdminConnection implements InitializingBean {
 		this.adminPw = adminPw;
 	}
 }
-
